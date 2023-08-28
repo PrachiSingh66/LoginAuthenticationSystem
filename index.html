@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="images/fb.png">
+                <img src="images/tw.png">
+                <img src="images/gp.png">
+            </div>
+            <form id="login" class="input-group" action="/login" method="POST">
+                <input type="text"  name="username" class="input-field" placeholder="User Id" required>
+                <input type="password"  name="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" name="check" class="check-box"><span>Remember Password</span>
+                <button type="submit" name="submit" class="submit-btn">Login</button>
+            </form>
+            <form id="register" class="input-group" action="/register" method="POST">
+                <input type="text"  name="username" class="input-field" placeholder="User Id" required>
+                <input type="email" name="email" class="input-field" placeholder="Email Id" required>
+                <input type="password" name="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" name="check" class="check-box"><span>I agree to the terms & conditions</span>
+                <button type="submit" name="submit" class="submit-btn" onclick="submit_btn()">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
